@@ -48,7 +48,7 @@ module ActiveAdmin
       # Helper method to render a filter form
       def active_admin_filters_form_for(search, filters, options = {})
         defaults = { builder: ActiveAdmin::Filters::FormBuilder,
-                     url: collection_path,
+                     url: collection_path(locale: ::I18n.locale),
                      html: {class: 'filter_form'} }
         required = { html: {method: :get},
                      as: :q }

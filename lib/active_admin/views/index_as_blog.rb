@@ -123,7 +123,7 @@ module ActiveAdmin
       def build_title(post)
         if @title
           h3 do
-            a(href: resource_path(post)) do
+            a(href: resource_path(post, locale: ::I18n.locale)) do
              render_method_on_post_or_call_proc post, @title
             end
           end

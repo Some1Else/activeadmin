@@ -33,7 +33,7 @@ module ActiveAdmin
         end
 
         def default_form_path
-          resource.persisted? ? resource_path(resource) : collection_path
+          resource.persisted? ? resource_path(resource, locale: ::I18n.locale) : collection_path(locale: ::I18n.locale)
         end
 
         def default_form_config

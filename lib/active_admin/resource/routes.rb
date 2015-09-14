@@ -5,7 +5,7 @@ module ActiveAdmin
       # @return [String] the path to this resource collection page
       # @example "/admin/posts"
       def route_collection_path(params = {})
-        RouteBuilder.new(self).collection_path(params)
+        RouteBuilder.new(self).collection_path(params.merge(locale: ::I18n.locale))
       end
 
       # @param resource [ActiveRecord::Base] the instance we want the path of
